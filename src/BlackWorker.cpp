@@ -25,11 +25,10 @@ void BlackWorker::run(function<int(int)> f) {
 void BlackWorker::reader(list<int>& list, mutex& mtx) {
     while (true) {
         int value;
-        lock_guard<mutex> lock (mtx);
         cout << "I in reader" << endl;
         cin >> value;
+        lock_guard<mutex> lock (mtx);
         list.push_back(value);
-        return;
     }
 }
 
