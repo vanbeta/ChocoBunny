@@ -30,3 +30,6 @@
 
 # Qt files
 *.pro.*
+
+# Mac
+*.DS_Store
